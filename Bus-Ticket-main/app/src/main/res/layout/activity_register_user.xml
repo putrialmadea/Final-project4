@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,136 +7,161 @@
     tools:context=".RegisterUser"
     android:background="@color/white">
 
-    <ImageView
-        android:id="@+id/loBookNow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/booknow"
-        android:layout_marginTop="80dp" />
-
-    <!-- Email -->
-    <TextView
-        android:id="@+id/tvEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/loBookNow"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="332dp"
-        android:text="Email"
-        android:textColor="@color/warna21"
-        android:textSize="18dp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/edEmailregister"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_below="@id/tvEmail"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:background="@drawable/ed_border"
-        android:paddingLeft="25dp"
-        android:hint="Enter your Email"
-        android:textColor="@color/warna2"
-        android:textColorHint="@color/warna5"
-        android:textStyle="bold"
-        android:textSize="13dp" />
-
-    <!-- Password -->
-    <TextView
-        android:id="@+id/tvPassword"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edEmailregister"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="297dp"
-        android:text="Password"
-        android:textColor="@color/warna21"
-        android:textSize="18dp"
-        android:textStyle="bold" />
+        android:orientation="vertical"
+        android:padding="35dp">
 
-    <EditText
-        android:id="@+id/edPasswordregister1"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_below="@id/tvPassword"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:background="@drawable/ed_border"
-        android:paddingLeft="25dp"
-        android:hint="Enter your Password"
-        android:textColor="@color/warna2"
-        android:textColorHint="@color/warna5"
-        android:textStyle="bold"
-        android:textSize="13dp" />
+        <ImageView
+            android:id="@+id/loBookNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/booknow"
+            android:layout_marginTop="120dp" />
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loBookNow"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50dp"
+            android:text="Register"
+            android:textColor="@color/warna21"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="30dp"
+            android:textColorHint="@color/warna5"
+            app:hintTextColor="@color/warna5">
+            <EditText
+                android:id="@+id/edEmailregister"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/tvEmail"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ed_border"
+                android:paddingLeft="25dp"
+                android:hint="Enter your Email"
+                android:textColor="@color/warna2"
+                android:textColorHint="@color/warna5"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-    <!-- Confirm Password -->
-    <TextView
-        android:id="@+id/tvConfirmPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edPasswordregister1"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="237dp"
-        android:text="Confirm Password"
-        android:textColor="@color/warna21"
-        android:textSize="18dp"
-        android:textStyle="bold" />
+<!--        <TextView-->
+<!--            android:id="@+id/tvPassword"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/edEmailregister"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:text="Password"-->
+<!--            android:textColor="@color/warna21"-->
+<!--            android:textSize="18dp"-->
+<!--            android:textStyle="bold" />-->
 
-    <EditText
-        android:id="@+id/edPasswordregister2"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_below="@id/tvConfirmPassword"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="8dp"
-        android:hint="Enter your Confirm Password"
-        android:paddingLeft="25dp"
-        android:textColor="@color/warna2"
-        android:textColorHint="@color/warna5"
-        android:textSize="13dp"
-        android:textStyle="bold"
-        android:background="@drawable/ed_border" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@color/warna5"
+            app:hintTextColor="@color/warna5"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/warna5">
+            <!-- Password -->
 
-    <!-- Button -->
-    <Button
-        android:id="@+id/btnSignUpregister"
-        android:layout_width="match_parent"
-        android:layout_height="47dp"
-        android:layout_below="@id/edPasswordregister2"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@color/warna5"
-        android:text="SignUp"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:textColor="@color/warna21"
-        android:textSize="16dp" />
+            <EditText
+                android:id="@+id/edPasswordregister1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/tvPassword"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ed_border"
+                android:paddingLeft="25dp"
+                android:hint="Enter your Password"
+                android:textColor="@color/warna2"
+                android:textColorHint="@color/warna5"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:inputType="textPassword"/>
 
-</RelativeLayout>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Confirm Password -->
+<!--        <TextView-->
+<!--            android:id="@+id/tvConfirmPassword"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/edPasswordregister1"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:text="Confirm Password"-->
+<!--            android:textColor="@color/warna21"-->
+<!--            android:textSize="18dp"-->
+<!--            android:textStyle="bold" />-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@color/warna5"
+            app:hintTextColor="@color/warna5"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/warna5">
+            <EditText
+                android:id="@+id/edPasswordregister2"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/tvConfirmPassword"
+                android:hint="Enter your Confirm Password"
+                android:paddingLeft="25dp"
+                android:textColor="@color/warna2"
+                android:textColorHint="@color/warna5"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:background="@drawable/ed_border" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/btnSignUpregister"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_below="@id/edPasswordregister2"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/warna5"
+            android:text="SignUp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/warna21"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+
+
+</ScrollView>
